@@ -21,7 +21,7 @@ client.on('message', msg => {
 
         if(!msg.member.roles.cache.has('766370186747576370')) {
             msg.member.roles.add(role);
-            msg.reply(`Role ${role.name} Ajouté`);
+            msg.reply(`Role ***${role.name}*** Ajouté`);
         }
         else {
             msg.member.roles.remove(role);
