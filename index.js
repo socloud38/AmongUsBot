@@ -3,7 +3,7 @@ const client = new Discord.Client();
 const prefix = "among-";
 const commands = {
     "tag": "vous ajoute le role AmongUsPlayeur",
-    "maps": "ajoute une images de toutes les maps sur le channel",
+    "map{1/2/3}": "ajoute une images de toutes les maps sur le channel",
 };
 const maps = ["map1","map2","map3"];
 
@@ -29,7 +29,7 @@ client.on('message', msg => {
     }
     else if (msg.content === `${prefix}map1` || msg.content === `${prefix}map2` || msg.content === `${prefix}map3`) {
         msg.reply("maps:", {files: [
-                `./maps_images/${msg.content}.jpg`,]})
+                `./maps_images/${msg.content.slice(6)}.jpg`,]})
     }
     else if (msg.content === `${prefix}help`) {
         for(const command in commands) {
