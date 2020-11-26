@@ -29,7 +29,7 @@ client.on('message', msg => {
         }
     }
     else if (message === `${prefix}map1` || msg.content === `${prefix}map2` || msg.content === `${prefix}map3`) {
-        msg.reply(msg.content.slice(6), {files: [
+        msg.reply(msg.content.slice(6).toLowerCase(), {files: [
                 `./maps_images/${msg.content.slice(6).toLowerCase()}.jpg`,]})
     }
     else if (message === `${prefix}help`) {
