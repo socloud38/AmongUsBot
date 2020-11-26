@@ -25,12 +25,12 @@ client.on('message', msg => {
         }
         else {
             msg.member.roles.remove(role);
-            msg.reply(`Role ${role.name} Retiré`);
+            msg.reply(`Role ***${role.name}*** Retiré`);
         }
     }
     else if (message === `${prefix}map1` || msg.content === `${prefix}map2` || msg.content === `${prefix}map3`) {
         msg.reply(msg.content.slice(6).toLowerCase(), {files: [
-                `./maps_images/${msg.content.slice(6).toLowerCase()}.jpg`,]})
+                `./maps_images/${msg.content.slice(6).toLowerCase()}.jpg`]})
     }
     else if (message === `${prefix}help`) {
         for(const command in commands) {
