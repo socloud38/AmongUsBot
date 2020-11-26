@@ -28,9 +28,9 @@ client.on('message', msg => {
     }
     else if (msg.content === `${prefix}maps`) {
         msg.reply("maps:", {files: [
-                "./maps_images/map1",
-                "./maps_images/map2",
-                "./maps_images/map3"]})
+                "./maps_images/map1.jpg",
+                "./maps_images/map2.jpg",
+                "./maps_images/map3.jpg"]})
     }
     else if (msg.content === `${prefix}help`) {
         for(const command in commands) {
