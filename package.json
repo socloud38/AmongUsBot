@@ -1,4 +1,17 @@
 {
+  "name": "amongusbot",
+
+  "description": "Simple Bot Discord for Among Us Server",
+
+  "version": "0.0.0",
+
+  "main": "index.js",
+
+  "scripts": {
+
+    "start": "node index.js"
+
+  },
   "dependencies": {
     "discord.js": "^12.5.1",
     "jquery": "^3.5.1"
