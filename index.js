@@ -4,7 +4,8 @@ const prefix = "among-";
 const commands = {
     "tag": "vous ajoute le role AmongUsPlayeur",
     "maps": "ajoute une images de toutes les maps sur le channel",
-}
+};
+const maps = ["map1","map2","map3"];
 
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
@@ -26,11 +27,9 @@ client.on('message', msg => {
             msg.reply(`Role ${role.name} Retiré`);
         }
     }
-    else if (msg.content === `${prefix}maps`) {
+    else if (msg.content === `${prefix}map1` || msg.content === `${prefix}map2` || msg.content === `${prefix}map3`) {
         msg.reply("maps:", {files: [
-                "./maps_images/map1.jpg",
-                "./maps_images/map2.jpg",
-                "./maps_images/map3.jpg"]})
+                `./maps_images/${msg.content}.jpg`,]})
     }
     else if (msg.content === `${prefix}help`) {
         for(const command in commands) {
